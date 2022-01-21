@@ -10,10 +10,8 @@ and (re)compiling the source code.
 # D1sturbed's build
 
 Just clone this repo and compile 
-'''
-$ sudo make clean install
-'''
-
+  $ sudo make clean install
+  
 # Patching in more features 
 
 You can find a treasure trove of excellent patches for dwm over at https://dwm.suckless.org/patches/
