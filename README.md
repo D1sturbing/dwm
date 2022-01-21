@@ -9,8 +9,10 @@ and (re)compiling the source code.
 
 # D1sturbed's build
 
-Just clone this repo and compile \n
+Just clone this repo and compile 
+'''
 $ sudo make clean install
+'''
 
 # Patching in more features 
 
