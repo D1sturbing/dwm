@@ -9,10 +9,11 @@ and (re)compiling the source code.
 
 # D1sturbed's build
 
-Just clone this repo and compile 
+Just clone this repo and compile with the following command:
 ```
-  $ sudo make clean install
+  $ make clean install
  ```
+dwm should put it's binary in ```/usr/local/bin``` by default, but if it doesn't work, you can run that command as root too.
 # Patching in more features 
 
 You can find a treasure trove of excellent patches for dwm over at https://dwm.suckless.org/patches/
