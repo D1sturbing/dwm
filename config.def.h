@@ -14,10 +14,20 @@ static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
 static const char col_cyan[]        = "#005577";
+static const char col_Midnight[]    = "#031A6B";
+static const char col_Indigo[]      = "#033860";
+static const char col_CG[]          = "#087CA7";
+static const char col_Yale[]        = "#004385";
+static const char col_Cerulean[]    = "#05B2DC";
+static const char col_Uranian[]     = "#ADD7F6";
+static const char col_FrenchSky[]   = "#87BFFF";
+static const char col_Dodger[]      = "#3F8EFC";
+static const char col_Ultramarine[] = "#2667FF";
+static const char col_Med_blue[]    = "#3B28CC";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
+	[SchemeSel]  = { col_gray4, col_Yale,  col_Yale  },
 };
 
 /* tagging */
@@ -31,7 +41,7 @@ static const Rule rules[] = {
 	/* class       instance  title           tags mask  isfloating  isterminal  noswallow  monitor */
 	{ "Gimp",      NULL,     NULL,           0,         1,          0,           0,        -1 },
 	{ "Firefox",   NULL,     NULL,           1 << 8,    0,          0,          -1,        -1 },
-	{ "alacritty", NULL,     NULL,           0,         0,          1,           0,        -1 },
+	{ "kitty",     NULL,     NULL,           0,         0,          1,           0,        -1 },
 	{ NULL,        NULL,     "Event Tester", 0,         0,          0,           1,        -1 }, /* xev */
 };
 
@@ -63,7 +73,7 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "kitty", NULL };
-static const char *xlock[]    = { "xsecurelock", NULL };
+static const char *xlock[]    = { "xsecurelock", NULL};
 
 #include "shiftview.c"
 
@@ -71,7 +81,7 @@ static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
-	{ MODKEY,                       XK_l,	   spawn,          {.v = xlock } },
+	{ MODKEY,			XK_l,      spawn,          {.v = xlock } },
 	{ MODKEY,                       XK_t,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
