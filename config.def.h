@@ -74,6 +74,8 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "kitty", NULL };
 static const char *xlock[]    = { "xsecurelock", NULL};
+static const char *brightnessup[] = {"light", "-A", "5", NULL};
+static const char *brightnessdown[] = {"light", "-U", "5", NULL};
 
 #include "shiftview.c"
 
@@ -82,6 +84,8 @@ static Key keys[] = {
 	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,			XK_l,      spawn,          {.v = xlock } },
+	{ MODKEY|ShiftMask,		XK_equal,  spawn,	   {.v = brightnessup} },
+	{ MODKEY|ShiftMask,		XK_minus,  spawn, 	   {.v = brightnessdown} },
 	{ MODKEY,                       XK_t,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
