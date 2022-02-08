@@ -25,10 +25,10 @@ I did not write the vast majority the patches used in this fork. (Shit's complic
 # Dependencies
 
 There are a few 3rd party programs that i've integrated into this fork.
-They are included but not limited to:
-```alacritty``` As default terminal
-```xsecurelock``` For screen locking
-```light``` For backlight control
+They are included but not limited to: \
+```alacritty``` As default terminal \
+```xsecurelock``` For screen locking \
+```light``` For backlight control \
 You can install these packages with the appropriate command for your distro.
 
 Arch
