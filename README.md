@@ -38,10 +38,10 @@ pacman -S xsecurelock light alacritty
 
 Debian/Ubuntu
 ```
-apt-get install xsecurelock light
+apt-get install xsecurelock light alacritty
 ```
 
 Fedora/RHEL/CentOS
 ```
-dnf intall xsecurelock light
+dnf intall xsecurelock light alacritty
 ```
