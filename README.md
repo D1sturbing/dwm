@@ -29,7 +29,7 @@ There are a few 3rd party programs that i've integrated into this fork.
 They are included but not limited to: \
 ```alacritty``` As default terminal \
 ```xsecurelock``` For screen locking \
-```light``` For backlight control \
+```light``` For backlight control 
 
 You can install these packages with the appropriate command for your distro.
 
