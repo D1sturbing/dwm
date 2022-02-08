@@ -21,3 +21,20 @@ dwm should put it's binary in ```/usr/local/bin``` by default, but if it doesn't
 You can find a treasure trove of excellent patches for dwm over at https://dwm.suckless.org/patches/
 Credit for those patches goes to their respective authors.
 I did not write the vast majority the patches used in this fork. (Shit's complicated, and i'm not a C wizard like the suckless devs or the Stanford/MIT gods.) But I intend to contribute when I have the skill and the time to.
+
+# Dependencies
+
+There are a few 3rd party programs that i've integrated into this fork.
+They are included but not limited to:
+```xsecurelock``` For screen locking
+```light``` For backlight control
+You can install these packages with the appropriate command for your distro.
+
+Arch
+```pacman -S xsecurelock light ```
+
+Debian/Ubuntu
+```apt-get install xsecurelock light```
+
+Fedora/RHEL/CentOS
+```dnf intall xsecurelock light```
