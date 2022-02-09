@@ -48,5 +48,5 @@ $ apt-get install xsecurelock light alacritty scrot
 
 Fedora/RHEL/CentOS
 ```
-$ dnf intall xsecurelock light alacritty scroy
+$ dnf intall xsecurelock light alacritty scrot
 ```
