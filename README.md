@@ -38,15 +38,15 @@ You can install these packages with the appropriate command for your distro.
 
 Arch
 ```
-pacman -S xsecurelock light alacritty scrot
+$ pacman -S xsecurelock light alacritty scrot
 ```
 
 Debian/Ubuntu
 ```
-apt-get install xsecurelock light alacritty scrot
+$ apt-get install xsecurelock light alacritty scrot
 ```
 
 Fedora/RHEL/CentOS
 ```
-dnf intall xsecurelock light alacritty scroy
+$ dnf intall xsecurelock light alacritty scroy
 ```
