@@ -10,7 +10,7 @@ The configuration of dwm is done by editing either config.h/config.def.h
 and (re)compiling the source code. It is good practice to back up your working build of dwm and apply patches/modifications to a copy before merging the two.
 Also, modifying config.def.h instead of config.h is encouraged, as well as removing the generated config.h file before recompiling as leaving it can cause issues that will prevent you from recompiling. But i'm not your dad, so you can do whatever you want.
 
-# D1sturbed's build
+# D1srupt's build
 
 Just clone this repo and compile with the following command:
 ```
