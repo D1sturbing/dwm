@@ -33,7 +33,7 @@ static const Rule rules[] = {
 	/* class       instance  title           tags mask  isfloating  isterminal  noswallow  monitor */
 	{ "Gimp",      NULL,     NULL,           0,         1,          0,           0,        -1 },
 	{ "Firefox",   NULL,     NULL,           1 << 8,    0,          0,          -1,        -1 },
-	{ "alacritty", NULL,     NULL,           0,         0,          1,           0,        -1 },
+	{ "Alacritty", NULL,     NULL,           0,         0,          1,           0,        -1 },
 	{ NULL,        NULL,     "Event Tester", 0,         0,          0,           1,        -1 }, /* xev */
 };
 
@@ -68,8 +68,8 @@ static const char *termcmd[]  = { "alacritty", NULL };
 static const char *xlock[]    = { "xsecurelock", NULL};
 static const char *brightnessup[] = {"light", "-A", "5", NULL};
 static const char *brightnessdown[] = {"light", "-U", "5", NULL};
-static const char *timetable[] = {"feh", "/home/disturbed/Pictures/timetable.png"};
-
+static const char *timetable[] = {"feh", "/home/beomus/Pictures/timetable.png", NULL};
+static const char *screenshot[] = {"scrot", "/home/beomus/Pictures/Screenshots/%Y-%M-%d-%T-screenshot.jpg", NULL};
 #include "shiftview.c"
 
 static Key keys[] = {
@@ -80,6 +80,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,		XK_equal,  spawn,	   {.v = brightnessup} },
 	{ MODKEY|ShiftMask,		XK_minus,  spawn, 	   {.v = brightnessdown} },
 	{ MODKEY|ShiftMask,		XK_t,	   spawn,	   {.v = timetable} },
+	{ MODKEY|ShiftMask,		XK_s,	   spawn,	   {.v = screenshot} },
 	{ MODKEY,                       XK_t,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
