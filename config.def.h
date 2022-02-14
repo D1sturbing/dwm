@@ -69,7 +69,7 @@ static const char *xlock[]    = { "xsecurelock", NULL};
 static const char *brightnessup[] = {"light", "-A", "5", NULL};
 static const char *brightnessdown[] = {"light", "-U", "5", NULL};
 static const char *timetable[] = {"feh", "/home/beomus/Pictures/timetable.png", NULL};
-static const char *screenshot[] = {"scrot", "/home/beomus/Pictures/Screenshots/%Y-%M-%d-%T-screenshot.jpg", NULL};
+static const char *screenshot[] = {"scrot", "/home/beomus/Pictures/Screenshots/%Y-%m-%d-%T-screenshot.jpg", NULL};
 #include "shiftview.c"
 
 static Key keys[] = {
