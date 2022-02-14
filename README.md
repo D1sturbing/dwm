@@ -38,21 +38,26 @@ They are included but not limited to: \
 ```alacritty``` As default terminal \
 ```xsecurelock``` For screen locking \
 ```light``` For backlight control \
-```scrot``` As screenshot tool
-
+```scrot``` As screenshot tool \
+ ```picom``` As the compositor
+ 
 You can install these packages with the appropriate command for your distro.
 
 Arch
 ```
-$ pacman -S xsecurelock light alacritty scrot
+$ pacman -S xsecurelock light alacritty scrot picom
 ```
 
 Debian/Ubuntu
 ```
-$ apt-get install xsecurelock light alacritty scrot
+$ apt-get install xsecurelock light alacritty scrot picom
 ```
 
 Fedora/RHEL/CentOS
 ```
-$ dnf intall xsecurelock light alacritty scrot
+$ dnf intall xsecurelock light alacritty scrot picom
+```
+Void
+```
+$ xbps-install xsecurelock light alacritty scrot picom
 ```
