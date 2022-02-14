@@ -18,6 +18,13 @@ Just clone this repo and compile with the following command:
  ```
 dwm should put it's binary in ```/usr/local/bin``` by default, but if it doesn't work, you can run that command as root too, it's what i do.
 
+Note: A lot of the commands that use the user directory, such as the scrot command i use to take a screenshot uses my user directory:
+```
+scrot /home/beomus/Pictures/Screenshots/%Y-%m-%d-%T-screenshot.jpg
+```
+As you would probably imagine, this will cause some problems if you don't change it to your username. Something I need to do is have dwm automatically pull the username, write it to a variable, and use that as the username in these commands. But (famous last words) this will work for now.
+
+
 # Patching in more features 
 
 You can find a treasure trove of excellent patches for dwm over at https://dwm.suckless.org/patches/
