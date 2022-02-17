@@ -43,7 +43,7 @@ They are included but not limited to: \
  
 You can install these packages with the appropriate command for your distro.
 
-Arch
+Arch/Artix/Manjaro/EndeavourOS
 ```
 $ pacman -S xsecurelock light alacritty scrot picom
 ```
