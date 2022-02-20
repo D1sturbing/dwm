@@ -21,7 +21,7 @@ Also, a lot of the commands that use the user directory, such as the scrot comma
 ```
 scrot /home/beomus/Pictures/Screenshots/%Y-%m-%d-%T-screenshot.jpg
 ```
-As you would probably imagine, this will cause some problems if you don't change it to your username. Something I need to do is have dwm automatically pull the username, write it to a variable, and use that as the username in these commands. But (famous last words) this will work for now.
+As you would probably imagine, this will cause some problems if you don't change it to your username. Something I need to do is have dwm automatically pull the username, write it to a variable, and use that as the username in these commands. Or just use ~/ .  But (famous last words) this will work for now.
 
 
 ## Patching in more features 
@@ -43,7 +43,7 @@ They are included but not limited to: \
  
 You can install these packages with the appropriate command for your distro.
 
-Arch/Artix/Manjaro/EndeavourOS
+Arch
 ```
 $ pacman -S xsecurelock light alacritty scrot picom
 ```
