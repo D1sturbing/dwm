@@ -35,7 +35,7 @@ I did not write the vast majority the patches used in this fork. (Shit's complic
 There are a few 3rd party programs that i've integrated into this fork.
 
 They are included but not limited to: \
-```alacritty``` As default terminal \
+```kitty``` As default terminal \
 ```xsecurelock``` For screen locking \
 ```light``` For backlight control \
 ```scrot``` As screenshot tool \
@@ -45,19 +45,19 @@ You can install these packages with the appropriate command for your distro.
 
 Arch
 ```
-$ pacman -S xsecurelock light alacritty scrot picom
+$ pacman -S xsecurelock light kitty scrot picom
 ```
 
 Debian/Ubuntu
 ```
-$ apt-get install xsecurelock light alacritty scrot picom
+$ apt-get install xsecurelock light kitty scrot picom
 ```
 
 Fedora/RHEL/CentOS
 ```
-$ dnf intall xsecurelock light alacritty scrot picom
+$ dnf intall xsecurelock light kitty scrot picom
 ```
 Void
 ```
-$ xbps-install xsecurelock light alacritty scrot picom
+$ xbps-install xsecurelock light kitty scrot picom
 ```
