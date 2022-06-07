@@ -16,6 +16,8 @@ static const char col_gray4[]       = "#eeeeee";
 static const char col_cyan[]        = "#005577";
 static const char col_Yale[]        = "#004385";
 static const char col_SlateRed[]    = "#D1615D";
+static const char col_LightningII[]  = "#3B6185";
+
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
@@ -31,7 +33,7 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class       instance  title           tags mask  isfloating  isterminal  noswallow  monitor */
-	{ "Gimp",      NULL,     NULL,           0,         1,          0,           0,        -1 },
+//	{ "Gimp",      NULL,     NULL,           0,         0,          0,           0,        -1 },
 	{ "Firefox",   NULL,     NULL,           1 << 8,    0,          0,          -1,        -1 },
 	{ "kitty",     NULL,     NULL,           0,         0,          1,           0,        -1 },
 	{ NULL,        NULL,     "Event Tester", 0,         0,          0,           1,        -1 }, /* xev */
@@ -70,6 +72,9 @@ static const char *brightnessup[] = {"light", "-A", "5", NULL};
 static const char *brightnessdown[] = {"light", "-U", "5", NULL};
 static const char *timetable[] = {"feh", "/home/beomus/Pictures/timetable.png", NULL};
 static const char *screenshot[] = {"scrot", "/home/beomus/Pictures/Screenshots/%Y-%m-%d-%T-screenshot.jpg", NULL};
+static const char *browser[] = {"librewolf", NULL};
+static const char *mail[] = {"kitty", "neomutt", NULL};
+static const char *mixer[] = {"kitty", "pulsemixer", NULL};
 #include "shiftview.c"
 
 static Key keys[] = {
@@ -81,6 +86,9 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,		XK_minus,  spawn, 	   {.v = brightnessdown} },
 	{ MODKEY|ShiftMask,		XK_t,	   spawn,	   {.v = timetable} },
 	{ MODKEY|ShiftMask,		XK_s,	   spawn,	   {.v = screenshot} },
+	{ MODKEY,			XK_b,	   spawn,	   {.v = browser} },
+	{ MODKEY,			XK_p,	   spawn,	   {.v = mixer} },
+	{ MODKEY,			XK_m,	   spawn,	   {.v = mail} },	
 	{ MODKEY,                       XK_t,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
