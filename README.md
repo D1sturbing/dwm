@@ -43,8 +43,6 @@ Super + m		| 	Open email with neomutt
 Super + Shift + s	| 	Take a screenshot with Scrot
 Super + Shift + Equals	| 	Brightness up with Light 
 Super + Shift + Minus	| 	Brightness down with Light 
-
-
 ```
 
 
