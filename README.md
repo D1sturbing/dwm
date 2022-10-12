@@ -28,7 +28,7 @@ As you would probably imagine, this will cause some problems if you don't change
 
 You can find a treasure trove of excellent patches for dwm over at https://dwm.suckless.org/patches/
 Credit for those patches goes to their respective authors.
-I did not write the vast majority the patches used in this fork. (Shit's complicated, and i'm not a C wizard like the suckless devs or the Stanford/MIT gods.) But I intend to contribute when I have the skill and the time to.
+I did not write any of the patches used in this fork. (Shit's complicated, and i'm not a C wizard like the suckless devs or the Stanford/MIT gods.) But I intend to contribute when I have the skill and the time to.
 
 
 ## Custom Shortcuts
