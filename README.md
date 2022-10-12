@@ -36,7 +36,7 @@ I did not write the vast majority the patches used in this fork. (Shit's complic
 ```
 Super + Enter		|	Open Kitty terminal
 Super + l		|	Lock display with xsecurelock
-Super + t		|	Open my timetable 
+Super + Shift + t		|	Open my timetable 
 Super + b		| 	Open Librewolf Browser
 Super + p		| 	Open Volume Control with pulsemixer
 Super + m		| 	Open email with neomutt
