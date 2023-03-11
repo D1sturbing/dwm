@@ -39,6 +39,7 @@ Super + l		|	Lock display with xsecurelock
 Super + Shift + t		|	Open my timetable 
 Super + b		| 	Open Librewolf Browser
 Super + p		| 	Open Volume Control with pulsemixer
+Super +n    |   Open Music with ncmpcpp
 Super + m		| 	Open email with thunderbird
 Super + Shift + s	| 	Take a screenshot with Scrot
 Super + Shift + Equals	| 	Brightness up with Light 
