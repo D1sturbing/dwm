@@ -58,31 +58,30 @@ They are included but not limited to: \
 ```xsecurelock``` For screen locking \
 ```light``` For backlight control \
 ```scrot``` As screenshot tool \
-```picom``` As the compositor
-```neomutt``` As default email client
-```librewolf``` As default browser 
+```picom``` As the compositor \
+```thunderbird``` As default email client \
+```librewolf``` As default browser  \
 
 You can install these packages with the appropriate command for your distro.
 
 Arch
 ```
-$ pacman -S xsecurelock light kitty scrot picom neomutt
+$ pacman -S xsecurelock light kitty scrot picom thunderbird
 ```
 
 Debian/Ubuntu
 ```
-$ apt-get install xsecurelock light kitty scrot picom neomutt
+$ apt-get install xsecurelock light kitty scrot picom thunderbird
 ```
 
 Fedora/RHEL/CentOS
 ```
-$ dnf intall xsecurelock light kitty scrot picom neomutt
+$ dnf intall xsecurelock light kitty scrot picom thunderbird
 ```
 Void
 ```
-$ xbps-install xsecurelock light kitty scrot picom neomutt
+$ xbps-install xsecurelock light kitty scrot picom thunderbird
 ```
 
 ###### NOTE:
 - Librewolf may need to be installed manually for your particular distro. See their website for more details. For arch users, librewolf is available in the AUR as both a binary, and source package.
-- My version of neomutt has been set up with [Luke Smith's neomutt setup scripts.](https://github.com/LukeSmithxyz/mutt-wizard)
