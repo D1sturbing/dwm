@@ -1,10 +1,10 @@
 # dwm
 
 dwm is an extremely fast, small, and dynamic window manager for X. 
-This particular fork of dwm, is an adaptation of my normal dwm fork, but specifically configured for the Lenovo ThinkPad X230.
+This is my personal fork of DWM. Keybinds have been specifically configured for my modded Thinkpad X230, and may need to be changed for your use.
 ![example_screenshot](example-desktop.jpg)
 
-## Configuring dwm
+## Configuring dwm-
 
 The configuration of dwm is done by editing either config.h/config.def.h
 and (re)compiling the source code. It is good practice to back up your working build of dwm and apply patches/modifications to a copy before merging the two.
@@ -34,9 +34,9 @@ I did not write any of the patches used in this fork. (Shit's complicated, and i
 ## Custom Shortcuts
 
 ```
-Super + Enter		|	Open Kitty terminal
+Super + Enter		|	Open ST terminal
 Super + l		|	Lock display with xsecurelock
-Super + Shift + t		|	Open my timetable 
+Super + Shift + t		|	Open my timetable (image file not included)
 Super + b		| 	Open Librewolf Browser
 Super + p		| 	Open Volume Control with pulsemixer
 Super + m		| 	Open email with thunderbird
@@ -46,14 +46,14 @@ Classic KB Brightness down	| 	Brightness down with xbacklight
 ```
 ## Note on brightness control
  
- Depending on your distro, you may need to add your user to a group that gives you write permissions for the files that control screen brightness. Or you can do what i did at first, and just chmod the file like an actual smoothbrain. (do not do that, you might give all users permission to change your screen brightness, which is not an intelligent decision...)
+ Depending on your distro, you may need to add your user to a group that gives you write permissions for the files that control screen brightness. Or you can do what i did at first, and just chmod the file like an actual smoothbrain. (do not do that, you might give all users permission to change your screen brightness, which is not an intelligent decision...) ALSO! You may not even have to do anything, as if your backlight is controlled by acpi, it might just work right out of the box. But your mileage may vary.
 
 ## Dependencies
 
 There are a few 3rd party programs that i've integrated into this fork.
 
 They are included but not limited to: \
-```kitty``` As default terminal \
+```st``` As default terminal \
 ```xsecurelock``` For screen locking \
 ```xbacklight``` For backlight control \
 ```scrot``` As screenshot tool \
@@ -65,21 +65,21 @@ You can install these packages with the appropriate command for your distro.
 
 Arch
 ```
-$ pacman -S xsecurelock xbacklight kitty scrot picom thunderbird
+$ pacman -S xsecurelock xbacklight scrot picom thunderbird
 ```
 
 Debian/Ubuntu
 ```
-$ apt-get install xsecurelock xbacklight kitty scrot picom thunderbird
+$ apt-get install xsecurelock xbacklight scrot picom thunderbird
 ```
 
 Fedora/RHEL/CentOS
 ```
-$ dnf intall xsecurelock xbacklight kitty scrot picom thunderbird
+$ dnf intall xsecurelock xbacklight scrot picom thunderbird
 ```
 Void
 ```
-$ xbps-install xsecurelock xbacklight kitty scrot picom thunderbird
+$ xbps-install xsecurelock xbacklight scrot picom thunderbird
 ```
 
 ###### NOTE:
