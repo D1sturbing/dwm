@@ -1,7 +1,7 @@
 # dwm
 
 dwm is an extremely fast, small, and dynamic window manager for X. 
-
+This particular fork of dwm, is an adaptation of my normal dwm fork, but specifically configured for the Lenovo ThinkPad X230.
 ![example_screenshot](example-desktop.jpg)
 
 ## Configuring dwm
@@ -39,11 +39,10 @@ Super + l		|	Lock display with xsecurelock
 Super + Shift + t		|	Open my timetable 
 Super + b		| 	Open Librewolf Browser
 Super + p		| 	Open Volume Control with pulsemixer
-Super +n    |   Open Music with ncmpcpp
 Super + m		| 	Open email with thunderbird
 Super + Shift + s	| 	Take a screenshot with Scrot
-Super + Shift + Equals	| 	Brightness up with Light 
-Super + Shift + Minus	| 	Brightness down with Light 
+Classic KB Brightness down	| 	Brightness up with xbacklight 
+Classic KB Brightness down	| 	Brightness down with xbacklight
 ```
 ## Note on brightness control
  
@@ -56,31 +55,31 @@ There are a few 3rd party programs that i've integrated into this fork.
 They are included but not limited to: \
 ```kitty``` As default terminal \
 ```xsecurelock``` For screen locking \
-```light``` For backlight control \
+```xbacklight``` For backlight control \
 ```scrot``` As screenshot tool \
-```picom``` As the compositor \
-```thunderbird``` As default email client \
-```librewolf``` As default browser  \
+```picom``` As the compositor
+```thunderbird``` As default email client
+```librewolf``` As default browser 
 
 You can install these packages with the appropriate command for your distro.
 
 Arch
 ```
-$ pacman -S xsecurelock light kitty scrot picom thunderbird
+$ pacman -S xsecurelock xbacklight kitty scrot picom thunderbird
 ```
 
 Debian/Ubuntu
 ```
-$ apt-get install xsecurelock light kitty scrot picom thunderbird
+$ apt-get install xsecurelock xbacklight kitty scrot picom thunderbird
 ```
 
 Fedora/RHEL/CentOS
 ```
-$ dnf intall xsecurelock light kitty scrot picom thunderbird
+$ dnf intall xsecurelock xbacklight kitty scrot picom thunderbird
 ```
 Void
 ```
-$ xbps-install xsecurelock light kitty scrot picom thunderbird
+$ xbps-install xsecurelock xbacklight kitty scrot picom thunderbird
 ```
 
 ###### NOTE:

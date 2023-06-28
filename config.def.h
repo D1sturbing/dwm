@@ -1,28 +1,27 @@
 /* See LICENSE file for copyright and license details. */
 
+#include <X11/XF86keysym.h>
+
 /* appearance */
 static const unsigned int borderpx	= 1;        /* border pixel of windows */
-static const unsigned int gappx		= 15;        /* gaps between windows */
+static const unsigned int gappx		= 10;        /* gaps between windows */
 static const unsigned int snap		= 32;       /* snap pixel */
 static const int swallowfloating	= 0;        /* 1 means swallow floating windows by default */
 static const int showbar		= 1;        /* 0 means no bar */
 static const int topbar			= 1;        /* 0 means bottom bar */
-static const char *fonts[]		= { "Terminus:size=11", "fontawesome:size=11" };
-static const char dmenufont[]		= "Terminus:size=11";
+static const char *fonts[]		= { "Berkeley Mono:size=8", "fontawesome:size=8" };
+static const char dmenufont[]		= "Berkeley Mono:size=8";
 static const char col_gray1[]		= "#222222";
 static const char col_gray2[]		= "#444444";
 static const char col_gray3[]		= "#bbbbbb";
 static const char col_gray4[]		= "#eeeeee";
-static const char col_cyan[]		= "#005577";
-static const char col_Yale[]		= "#004385";
-static const char col_SlateRed[]	= "#D1615D";
-static const char col_LightningII[]	= "#3B6185";
-static const char col_SkyBlue[]		= "#628bc3";
+static const char col_cyan[]        	= "#005577";
+static const char col_StratoRed[]	= "#b63c55";
 
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_SkyBlue,  col_SkyBlue },
+	[SchemeSel]  = { col_gray4, col_StratoRed,  col_StratoRed },
 };
 
 /* tagging */
@@ -36,8 +35,9 @@ static const Rule rules[] = {
 	/* class       instance  title           tags mask  isfloating  isterminal  noswallow  monitor */
 //	{ "Gimp",      NULL,     NULL,           0,         0,          0,           0,        -1 },
 	{ "Firefox",   NULL,     NULL,           1 << 8,    0,          0,          -1,        -1 },
-	{ "kitty",     NULL,     NULL,           0,         0,          1,           0,        -1 },
+	{ "st",	       NULL,     NULL,           0,         0,          1,           0,        -1 },
 	{ NULL,        NULL,     "Event Tester", 0,         0,          0,           1,        -1 }, /* xev */
+	{"LibreOffice",NULL, 	 "LibreOffice",		 0,	    0,          0,	     1,		-1},
 };
 
 /* layout(s) */
@@ -66,30 +66,49 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-c", "-l", "20", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
-static const char *termcmd[]  = { "kitty", NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-c", "-l", "20", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_StratoRed, "-sf", col_gray4, NULL };
+static const char *termcmd[]  = { "st", NULL };
 static const char *xlock[]    = { "xsecurelock", NULL};
-static const char *brightnessup[] = {"light", "-A", "5", NULL};
-static const char *brightnessdown[] = {"light", "-U", "5", NULL};
+static const char *brightnessup[] = {"xbacklight", "-inc", "5", NULL};
+static const char *brightnessdown[] = {"xbacklight", "-dec", "5", NULL};
 static const char *timetable[] = {"feh", "/home/beomus/Pictures/timetable.png", NULL};
 static const char *screenshot[] = {"scrot", "/home/beomus/Pictures/Screenshots/%Y-%m-%d-%T-screenshot.jpg", NULL};
 static const char *browser[] = {"librewolf", NULL};
-static const char *mail[] = {"kitty", "neomutt", NULL};
-static const char *mixer[] = {"kitty", "pulsemixer", NULL};
+static const char *mail[] = {"thunderbird", NULL};
+static const char *mixer[] = {"st", "pulsemixer", NULL};
+static const char *ncmpcpp[] = {"st", "ncmpcpp", NULL};
+static const char *mounter[] = {"mounter", NULL};
+static const char *unmounter[] = {"unmounter", NULL};
+
 #include "shiftview.c"
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
+
+
 	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,			XK_l,      spawn,          {.v = xlock } },
-	{ MODKEY|ShiftMask,		XK_equal,  spawn,	   {.v = brightnessup} },
-	{ MODKEY|ShiftMask,		XK_minus,  spawn, 	   {.v = brightnessdown} },
 	{ MODKEY|ShiftMask,		XK_t,	   spawn,	   {.v = timetable} },
 	{ MODKEY|ShiftMask,		XK_s,	   spawn,	   {.v = screenshot} },
 	{ MODKEY,			XK_b,	   spawn,	   {.v = browser} },
 	{ MODKEY,			XK_p,	   spawn,	   {.v = mixer} },
-	{ MODKEY,			XK_m,	   spawn,	   {.v = mail} },	
+	{ MODKEY,			XK_m,	   spawn,	   {.v = mail} },
+	{ MODKEY,			XK_n,	   spawn,	   {.v = ncmpcpp} },
+	{ MODKEY,			XK_F9,	   spawn,	   {.v = mounter} },
+	{ MODKEY,			XK_F10,	   spawn,	   {.v = unmounter} },
+
+//long ass entries start
+	{ 0,			XF86XK_MonBrightnessUp,		spawn,	   {.v = brightnessup} },
+	{ 0,			XF86XK_MonBrightnessDown,	spawn, 	   {.v = brightnessdown} },
+	{ 0,			XF86XK_AudioPlay,		spawn,	   SHCMD("mpc toggle") },
+	{ 0,			XF86XK_AudioNext,		spawn,	   SHCMD("mpc next") },
+	{ 0,			XF86XK_AudioPrev,		spawn,	   SHCMD("mpc prev") },
+	{ 0,			XF86XK_AudioStop,		spawn,	   SHCMD("mpc stop") },
+	{ MODKEY,		XK_Insert, spawn,	   	SHCMD("xdotool type $(grep -v '^#' ~/.local/share/bookmarks/bookmarks.txt | dmenu -i -l 50 | cut -d' ' -f1)") },
+//long ass entries end
+
+	{ MODKEY|ShiftMask,		XK_a,	   spawn,	   {.v = (const char*[]){"bookmarkthis", "NULL"} } },
 	{ MODKEY,                       XK_t,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
@@ -125,6 +144,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+	{ MODKEY|ShiftMask,		XK_r,      quit,           {1} }, 
 };
 
 /* button definitions */
