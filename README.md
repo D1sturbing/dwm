@@ -82,6 +82,10 @@ Void
 $ xbps-install xsecurelock xbacklight scrot picom thunderbird
 
 ```
+Gentoo
+```
+You know what you're doing...
+```
 
 ###### NOTE:
 - Librewolf may need to be installed manually for your particular distro. See their website for more details. For arch users, librewolf is available in the AUR as both a binary, and source package.
