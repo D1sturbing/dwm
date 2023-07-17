@@ -34,13 +34,13 @@ I did not write any of the patches used in this fork. (Shit's complicated, and i
 ## Custom Shortcuts
 
 ```
-Super + Enter		|	Open ST terminal
-Super + l		|	Lock display with xsecurelock
-Super + Shift + t		|	Open my timetable (image file not included)
-Super + b		| 	Open Librewolf Browser
-Super + p		| 	Open Volume Control with pulsemixer
-Super + m		| 	Open email with thunderbird
-Super + Shift + s	| 	Take a screenshot with Scrot
+Super + Enter                   |	Open ST terminal
+Super + l                       |	Lock display with xsecurelock
+Super + Shift + t	        |	Open my timetable (image file not included)
+Super + b		        | 	Open Librewolf Browser
+Super + p		        | 	Open Volume Control with pulsemixer
+Super + m		        | 	Open email with thunderbird
+Super + Shift + s	        | 	Take a screenshot with Scrot
 Classic KB Brightness down	| 	Brightness up with xbacklight 
 Classic KB Brightness down	| 	Brightness down with xbacklight
 ```
@@ -80,6 +80,7 @@ $ dnf intall xsecurelock xbacklight scrot picom thunderbird
 Void
 ```
 $ xbps-install xsecurelock xbacklight scrot picom thunderbird
+
 ```
 
 ###### NOTE:
