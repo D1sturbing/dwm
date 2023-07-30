@@ -71,12 +71,15 @@ static const char *termcmd[]  = { "st", NULL };
 static const char *xlock[]    = { "xsecurelock", NULL};
 static const char *brightnessup[] = {"xbacklight", "-inc", "5", NULL};
 static const char *brightnessdown[] = {"xbacklight", "-dec", "5", NULL};
+static const char *volup[] = {"pulsemixer", "--change-volume", "+5"};
+static const char *voldown[] = {"pulsemixer", "--change-volume", "-5"};
 static const char *timetable[] = {"feh", "/home/beomus/Pictures/timetable.png", NULL};
 static const char *screenshot[] = {"scrot", "/home/beomus/Pictures/Screenshots/%Y-%m-%d-%T-screenshot.jpg", NULL};
 static const char *browser[] = {"librewolf", NULL};
 static const char *mail[] = {"thunderbird", NULL};
 static const char *mixer[] = {"st", "pulsemixer", NULL};
 static const char *ncmpcpp[] = {"st", "ncmpcpp", NULL};
+static const char *newsboat[] = {"st", "newsboat", NULL};
 static const char *mounter[] = {"mounter", NULL};
 static const char *unmounter[] = {"unmounter", NULL};
 
@@ -97,11 +100,14 @@ static Key keys[] = {
 	{ MODKEY,			XK_n,	   spawn,	   {.v = ncmpcpp} },
 	{ MODKEY,			XK_F9,	   spawn,	   {.v = mounter} },
 	{ MODKEY,			XK_F10,	   spawn,	   {.v = unmounter} },
+	{ MODKEY,			XK_r,	   spawn,	   {.v = newsboat} },
 
 //long ass entries start
 	{ 0,			XF86XK_MonBrightnessUp,		spawn,	   {.v = brightnessup} },
 	{ 0,			XF86XK_MonBrightnessDown,	spawn, 	   {.v = brightnessdown} },
 	{ 0,			XF86XK_AudioPlay,		spawn,	   SHCMD("mpc toggle") },
+	{ 0,			XF86XK_AudioRaiseVolume,	spawn,	   {.v = volup} },
+	{ 0,			XF86XK_AudioLowerVolume,	spawn,	   {.v = voldown} },
 	{ 0,			XF86XK_AudioNext,		spawn,	   SHCMD("mpc next") },
 	{ 0,			XF86XK_AudioPrev,		spawn,	   SHCMD("mpc prev") },
 	{ 0,			XF86XK_AudioStop,		spawn,	   SHCMD("mpc stop") },
