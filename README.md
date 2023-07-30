@@ -4,7 +4,7 @@ dwm is an extremely fast, small, and dynamic window manager for X.
 This is my personal fork of DWM. Keybinds have been specifically configured for my modded Thinkpad X230, and may need to be changed for your use.
 ![example_screenshot](example-desktop.jpg)
 
-## Configuring dwm-
+## Configuring dwm
 
 The configuration of dwm is done by editing either config.h/config.def.h
 and (re)compiling the source code. It is good practice to back up your working build of dwm and apply patches/modifications to a copy before merging the two.
